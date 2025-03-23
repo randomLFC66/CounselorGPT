@@ -1,0 +1,115 @@
+def get_arts_path(grade, category):
+    if category == "visual arts":
+        if grade == 9:
+            print("\nWelcome to your Freshman year in Visual Arts! Here are your options for this year:")
+            print("1. Art 1 - Drawing and Painting")
+            print("2. 3D Design 1 - Ceramics & Sculpture")
+            print("3. Photography 1")
+        elif grade == 10:
+            print("\nFor your Sophomore year in Visual Arts, you can take:")
+            print("1. Art 2 - Drawing and Painting")
+            print("2. 3D Design 2 - Ceramics & Sculpture")
+            print("3. Photography 2")
+        elif grade == 11:
+            print("\nJunior year in Visual Arts offers these choices:")
+            print("1. Art 3 - Drawing and Painting")
+            print("2. 3D Design 3 - Ceramics & Sculpture")
+        elif grade == 12:
+            print("\nFor your Senior year in Visual Arts, you can take:")
+            print("1. Art 4 - Drawing and Painting")
+            print("2. AP Studio Art: 2D Design")
+   
+    elif category == "theatre arts":
+        if grade == 9:
+            print("\nWelcome to your Freshman year in Theatre Arts! Your choices for this year:")
+            print("1. Theatre 1 - Beginning")
+            print("2. Musical Theatre 1")
+        elif grade == 10:
+            print("\nIn your Sophomore year in Theatre Arts, you can choose:")
+            print("1. Theatre 2 - Production & Performance")
+            print("2. Musical Theatre 2")
+        elif grade == 11:
+            print("\nFor Junior year in Theatre Arts, your options include:")
+            print("1. Theatre 3 - Directing for Stage")
+            print("2. Musical Theatre 3")
+        elif grade == 12:
+            print("\nSenior year in Theatre Arts offers the following advanced options:")
+            print("1. Theatre 4 Honors")
+            print("2. Musical Theatre 4 Honors")
+   
+    elif category == "production arts":
+        if grade == 9:
+            print("\nFor your Freshman year in Production & Managerial Arts, you can start with:")
+            print("1. Technical Theatre 1 - Technology & Design")
+        elif grade == 10:
+            print("\nSophomore year in Production & Managerial Arts offers:")
+            print("1. Technical Theatre 2 - Stage Design")
+        elif grade == 11:
+            print("\nFor Junior year in Production & Managerial Arts, you can take:")
+            print("1. Technical Theatre 3 - Production Staff")
+        elif grade == 12:
+            print("\nFor your Senior year in Production & Managerial Arts, you can opt for:")
+            print("1. Technical Theatre 4 Honors, Theatre Leadership")
+   
+    elif category == "music theory":
+        if grade == 9 or grade == 10:
+            print("\nThere are no music theory courses available for Freshman or Sophomore year.")
+        elif grade == 11:
+            print("\nFor Junior year in Music Theory, you can take:")
+            print("1. AP Music Theory")
+        elif grade == 12:
+            print("\nFor Senior year in Music Theory, you can continue with:")
+            print("1. AP Music Theory")
+   
+    elif category == "instrumental music":
+        if grade == 9 or grade == 10 or grade == 11 or grade == 12:
+            print("\nFor all grades in Instrumental Music, you have the following options:")
+            print("1. Concert Band")
+            print("2. Symphonic Band")
+            print("3. Wind Ensemble")
+            print("4. Jazz Ensemble")
+
+def main():
+    print("Welcome to your Visual and Performing Arts counseling session!")
+
+    # Ask the user up to which grade they want advice
+    max_grade = int(input("Which year would you like advice for? Please enter 9, 10, 11, or 12: "))
+   
+    # Make sure the input is valid
+    if max_grade not in [9, 10, 11, 12]:
+        print("Invalid input. Please enter a number between 9 and 12.")
+        return
+   
+    # Ask the user for their category of interest
+    print("\nWhich category would you like advice on?")
+    print("1. Visual Arts")
+    print("2. Theatre Arts")
+    print("3. Production & Managerial Arts")
+    print("4. Music Theory")
+    print("5. Instrumental Music")
+   
+    category_choice = int(input("Enter the number corresponding to your category (1-5): "))
+   
+    if category_choice == 1:
+        category = "visual arts"
+    elif category_choice == 2:
+        category = "theatre arts"
+    elif category_choice == 3:
+        category = "production arts"
+    elif category_choice == 4:
+        category = "music theory"
+    elif category_choice == 5:
+        category = "instrumental music"
+    else:
+        print("Invalid choice! Please choose a number between 1 and 5.")
+        return
+   
+    # Guide the user for each grade level
+    for grade in range(9, max_grade + 1):
+        grade_track = input(f"\nFor grade {grade}, would you like to take an 'easy' or 'advanced' track in {category.replace('_', ' ').title()}? ").lower()
+        get_arts_path(grade, category)
+   
+    print("\nThank you for going through your arts track selection! Good luck with your studies!")
+
+if __name__ == "__main__":
+    main()
