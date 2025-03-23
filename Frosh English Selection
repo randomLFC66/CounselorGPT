@@ -1,0 +1,9 @@
+froshEng = input("Do you want a harder, or easier English path? Type advanced, medium or easy.")
+
+if froshEng == "advanced":
+    print("English 2 Honors, AP English Language, AP Lit. This path will set you up for success in the long run of English, especially if you wish to pursue some English-related fields.")
+elif froshEng == "medium":
+    print("""English 2 Honors, English 3: American Experience, and AP Lang. This path is somewhat difficult, but easier to balance, especially in junior year.
+          Good for CS/Engineering majors, as well as Biology majors.""")
+elif froshEng == "easy":
+    print("English 2, English 3, English 4. This is the easiest path for English. Better if you want to apply to less competitive colleges, or if you want to go straight to a job.")
