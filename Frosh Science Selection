@@ -1,0 +1,19 @@
+froshSci = input("Do you want a harder, or easier Science path? Type advanced or easy.")
+
+if froshSci == "advanced":
+    froshSciChoice = input("Everyone takes Biology regular freshman year, but then you can take Chem Honors. By junior year you have a choice. Do you want to pursue: Bio, Chem or Physics?")
+    if froshSciChoice == "Bio":
+        froshSciChoice = print("""Great choice! You could end up taking AP Biology in your junior year. However, if that's too much, consider taking Human Anatomy and
+        Physiology your junior year before making your way to AP Biology your senior year.""")
+    elif froshSciChoice == "Chem":
+        froshSciChoice = print("""Great choice! Chemistry is extremely interesting. If you wish to continue with it, you could end up taking AP Chemistry your junior year. If you want to
+        continue your scientific journey, I would recommend taking AP Environmental Sciences, as it relates to Chemistry, and our environment. If you want to stop, however, you are only required
+        to take three years of science, and ending with AP Chemistry would be especially strong on an application.""")
+    elif froshSciChoice == "Physics":
+        froshSciChoice = print("""Great choice! Physics is really interesting. I would recommend taking Physics is you enjoy math, as the two rely on each other. You would probably take AP Physics 1
+        in your junior year, before proceeding to AP Physics 2 your senior year. However, if you think you're not ready your junior year, you're welcome to take college preparatory Physics to
+        get prepared, before venturing on to take AP Physics 1.""")
+elif froshSci == "easy":
+    print("""That's good. You would just take Biology, Chemistry and Physics. However, if you wanted a bit of a challenge senior year, you could always try AP Environmental Sciences.
+    But youre only required to take 3 years of science. However, colleges will like it if you take four years.""")
+    
