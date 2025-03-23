@@ -1,0 +1,77 @@
+def get_grade_path(grade, current_track):
+    if grade == 9:
+        print("Welcome to your Freshman year! Let's decide on your math path for the year.")
+        if current_track == "easy":
+            print("For your 9th-grade year, taking IM 1 is a great starting point.")
+            print("This track will build a strong foundation for your math skills.")
+            print("For next year, you can choose between IM 2 or the more advanced IM 3 / IM 3 Stem.")
+        elif current_track == "advanced":
+            print("For your 9th-grade year, starting with IM 2 will give you a strong start toward advanced math.")
+            print("Next year, you'll have the option to move to IM 3 or IM 3 Stem, both of which are advanced courses.")
+        else:
+            print("Invalid input! Please choose 'easy' or 'advanced'.")
+    elif grade == 10:
+        print("\nWelcome to your Sophomore year! How do you want to continue your math journey?")
+        if current_track == "easy":
+            print("If you want to stay in the easier path, IM 2 will be your course this year.")
+            print("For next year, you can step up to IM 3 or IM 3 Stem, or explore other advanced options like Pre-Calc.")
+        elif current_track == "advanced":
+            print("For the advanced path, IM 3 or IM 3 Stem are excellent choices for your Sophomore year.")
+            print("You can also start thinking about Pre-Calculus or IM 4 if you're looking to challenge yourself further.")
+        else:
+            print("Invalid input! Please choose 'easy' or 'advanced'.")
+    elif grade == 11:
+        print("\nIt's Junior year, the time to take your math to the next level!")
+        if current_track == "easy":
+            print("If you prefer an easier path, you could take Pre-Calculus or IM 4 this year.")
+            print("You can also choose from other courses like Statistics or AP Statistics if you're interested.")
+        elif current_track == "advanced":
+            print("For an advanced track, Pre-Calculus / IM 4 is a great choice.")
+            print("You can also choose from AP Statistics, AP Calculus AB, and AP Computer Science A* for more challenge.")
+        else:
+            print("Invalid input! Please choose 'easy' or 'advanced'.")
+    elif grade == 12:
+        print("\nWelcome to your Senior year! Let's make sure you're finishing strong.")
+        if current_track == "easy":
+            print("For an easier path, you can stick with Pre-Calculus, Statistics, or AP Statistics this year.")
+            print("If you're looking to keep things manageable, AP Calculus AB and Computer Science A* are also options.")
+        elif current_track == "advanced":
+            print("For a truly advanced year, AP Calculus AB, AP Calculus BC, and AP Computer Science A* will provide the challenge you're looking for.")
+            print("You can also choose to dive deeper into Statistics or Senior Seminar.")
+        else:
+            print("Invalid input! Please choose 'easy' or 'advanced'.")
+
+def main():
+    print("Welcome to your high school math counseling session!")
+   
+    # Ask the user up to which grade they want the counselor to help
+    max_grade = int(input("Which year would you like advice for? Please enter 9, 10, 11, or 12: "))
+   
+    # Make sure the input is valid
+    if max_grade not in [9, 10, 11, 12]:
+        print("Invalid input. Please enter a number between 9 and 12.")
+        return
+   
+    # 9th Grade
+    froshMath = input("For 9th grade, do you prefer an 'easy' or 'advanced' math track? ").lower()
+    get_grade_path(9, froshMath)
+   
+    if max_grade > 9:
+        # 10th Grade
+        sophMath = input("\nFor 10th grade, do you want to stick with the 'easy' or 'advanced' track? ").lower()
+        get_grade_path(10, sophMath)
+   
+    if max_grade > 10:
+        # 11th Grade
+        juniorMath = input("\nFor 11th grade, would you like an 'easy' or 'advanced' track? ").lower()
+        get_grade_path(11, juniorMath)
+   
+    if max_grade > 11:
+        # 12th Grade
+        seniorMath = input("\nFinally, for 12th grade, would you prefer an 'easy' or 'advanced' track? ").lower()
+        get_grade_path(12, seniorMath)
+   
+    print("\nThank you for going through your high school math track selection. Good luck with your studies!")
+
+if __name__ == "__main__":
+    main()
